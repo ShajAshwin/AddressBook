@@ -74,7 +74,7 @@ public class ContactServiceIMP implements ContactService {
     @Override
     public void deleteById(int id) {
         Contact contact = repository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Contact Deleted '\n'"+ repository.findById(id).get()));
+                .orElseThrow(() -> new NoSuchCustomerExistsException("No customer with ID =  '\n'"+ repository.findById(id).get()));
         repository.deleteById(id);
     }
 

@@ -1,11 +1,10 @@
 package com.example.AddressBook.service;
 
-import com.example.AddressBook.dao.Repository;
+import com.example.AddressBook.dao.ContactRepository;
 import com.example.AddressBook.dto.ContactDTO;
 import com.example.AddressBook.entity.Contact;
 import com.example.AddressBook.exeption.ContactAlreadyExistsException;
 import com.example.AddressBook.exeption.NoSuchCustomerExistsException;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -29,7 +28,7 @@ import static org.mockito.Mockito.when;
 class ContactServiceIMPTest {
 
     @Mock
-    private Repository repository;
+    private ContactRepository repository;
 
     @InjectMocks
     private ContactServiceIMP service;

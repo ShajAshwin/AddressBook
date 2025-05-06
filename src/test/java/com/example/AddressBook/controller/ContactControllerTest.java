@@ -1,6 +1,6 @@
 package com.example.AddressBook.controller;
 
-import com.example.AddressBook.dao.Repository;
+import com.example.AddressBook.dao.ContactRepository;
 import com.example.AddressBook.dto.ContactDTO;
 import com.example.AddressBook.entity.Contact;
 import com.example.AddressBook.exeption.ContactAlreadyExistsException;
@@ -29,7 +29,7 @@ class ContactControllerTest {
     ContactServiceIMP contactService;
 
     @Mock
-    Repository repository;
+    ContactRepository repository;
 
     @InjectMocks
     ContactController contactController;
